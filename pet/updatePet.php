@@ -66,18 +66,26 @@ if ($_GET['id']) {
                 <tr>
                     <th>Status</th>
                     <td>
-                        <select class=" form-select" name="status" aria-label="Default select example" value="<?php echo $status ?>">
-                            <option value='Available'>Available</option>
-                            <option value='Reserved'>Reserved</option>
+                        <select class=" form-select" name="status">
+                            <option value='Available' <?php if ($status == 'Available') {
+                                                            echo ("selected");
+                                                        } ?>>Available</option>
+                            <option value='Reserved' <?php if ($status == 'Reserved') {
+                                                            echo ("selected");
+                                                        } ?>>Reserved</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <th>Size</th>
                     <td>
-                        <select class=" form-select" name="size" aria-label="Default select example" value="<?php echo $size ?>">
-                            <option value='Small'>Small</option>
-                            <option value='Large'>Large</option>
+                        <select class=" form-select" name="size">
+                            <option value='Small' <?php if ($size == 'Small') {
+                                                        echo ("selected");
+                                                    } ?>>Small</option>
+                            <option value='Large' <?php if ($size == 'Large') {
+                                                        echo ("selected");
+                                                    } ?>>Large</option>
                         </select>
                     </td>
                 </tr>
