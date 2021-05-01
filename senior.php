@@ -44,9 +44,10 @@ $connect->close();
         <?php
         $i = 0;
         while ($i < count($row2)) {
-            if ($row2[$i]['age'] > 8) {
+            if ($row2[$i]['status'] == 'Available') {
+                if ($row2[$i]['age'] > 8) {
 
-                echo "<div class='card m-2 border' style='width: 12rem;'>
+                    echo "<div class='card m-2 border' style='width: 12rem;'>
                     <img src='" . $row2[$i]['picture'] . "' class='card-img-top' height=70%>
                     <div class='card-body d-flex flex-column'>
                     <p class='card-text'><i class='material-icons'>&#xf21a;</i> I'm a senior!</p> 
@@ -54,9 +55,10 @@ $connect->close();
                     <p class='card-text'>" . $row2[$i]['breed'] . " (" . $row2[$i]['size'] . ")</p>
                         <p class='card-text'>" . $row2[$i]['age'] . " yrs old</p>
                         <p class='card-text'>Home: " . $row2[$i]['locCity'] . "</p>
-                        <a href='#' class='btn btn-outline-dark'>'Dop Me!</a>                        
+                        <a href='pet/detailsPet.php?id=" . $row2[$i]['id'] . "' class='btn btn-outline-dark'>'Dop Me!</a>                        
                     </div>
                 </div>";
+                }
             }
             $i++;
         }
