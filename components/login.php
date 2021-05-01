@@ -82,6 +82,7 @@ $connect->close();
     <fieldset>
         <div class="container">
             <form class="w-75" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+                <h2><b>D<i class='material-icons'>&#xE91d;</i>pa<i class='material-icons'>&#xe88a;</i>ier</b></h2>
                 <h2>Log In</h2>
                 <hr />
                 <?php
