@@ -99,45 +99,47 @@ $connect->close();
 </head>
 
 <body>
-    <div class="container">
-        <div class="<?php echo $class; ?>" role="alert">
-            <p><?php echo ($message) ?? ''; ?></p>
-            <p><?php echo ($uploadError) ?? ''; ?></p>
-        </div>
+    <fieldset>
+        <div class="container">
+            <div class="<?php echo $class; ?>" role="alert">
+                <p><?php echo ($message) ?? ''; ?></p>
+                <p><?php echo ($uploadError) ?? ''; ?></p>
+            </div>
 
-        <h2>Edit Profile</h2>
-        <img class='img-thumbnail rounded-circle' src='../pictures/<?php echo $data['picture'] ?>' alt="<?php echo $f_name ?>">
-        <form method="post" enctype="multipart/form-data">
-            <table class="table">
-                <tr>
-                    <th>First Name</th>
-                    <td><input class="form-control" type="text" name="first_name" placeholder="First Name" value="<?php echo $f_name ?>" /></td>
-                </tr>
-                <tr>
-                    <th>Last Name</th>
-                    <td><input class="form-control" type="text" name="last_name" placeholder="Last Name" value="<?php echo $l_name ?>" /></td>
-                </tr>
-                <tr>
-                    <th>Email</th>
-                    <td><input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email ?>" /></td>
-                </tr>
-                <tr>
-                    <th>Date of birth</th>
-                    <td><input class="form-control" type="date" name="date_of_birth" placeholder="Date of birth" value="<?php echo $date_birth ?>" /></td>
-                </tr>
-                <tr>
-                    <th>Picture</th>
-                    <td><input class="form-control" type="file" name="picture" /></td>
-                </tr>
-                <tr>
-                    <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
-                    <input type="hidden" name="picture" value="<?php echo $picture ?>" />
-                    <td><button name="submit" class="btn btn-success" type="submit">Save Changes</button></td>
-                    <td><a href="<?php echo $backBtn ?>"><button class="btn btn-warning" type="button">Back</button></a></td>
-                </tr>
-            </table>
-        </form>
-    </div>
+            <h2>Edit Profile</h2>
+            <img class='img-thumbnail rounded-circle' src='../pictures/<?php echo $data['picture'] ?>' alt="<?php echo $f_name ?>">
+            <form method="post" enctype="multipart/form-data">
+                <table class="table">
+                    <tr>
+                        <th>First Name</th>
+                        <td><input class="form-control" type="text" name="first_name" placeholder="First Name" value="<?php echo $f_name ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td><input class="form-control" type="text" name="last_name" placeholder="Last Name" value="<?php echo $l_name ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Date of birth</th>
+                        <td><input class="form-control" type="date" name="date_of_birth" placeholder="Date of birth" value="<?php echo $date_birth ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Picture</th>
+                        <td><input class="form-control" type="file" name="picture" /></td>
+                    </tr>
+                    <tr>
+                        <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
+                        <input type="hidden" name="picture" value="<?php echo $picture ?>" />
+                    </tr>
+                </table>
+                <button name="submit" class="btn btn-outline-success" type="submit">Save Changes</button>
+                <a href="<?php echo $backBtn ?>"><button class="btn btn-outline-warning" type="button">Back</button></a>
+            </form>
+        </div>
+    </fieldset>
 </body>
 
 </html>

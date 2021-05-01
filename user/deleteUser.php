@@ -75,8 +75,8 @@ $connect->close();
         <form method="post">
             <input type="hidden" name="id" value="<?php echo $id ?>" />
             <input type="hidden" name="picture" value="<?php echo $picture ?>" />
-            <button class="btn btn-danger" type="submit">Yes, Delete</button>
-            <a href="dashlistUser.php"><button class="btn btn-warning" type="button">No, Back</button></a>
+            <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+            <a href="dashlistUser.php"><button class="btn btn-outline-success" type="button">No, Back</button></a>
         </form>
     </fieldset>
 </body>
