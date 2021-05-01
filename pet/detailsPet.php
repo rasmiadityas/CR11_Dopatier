@@ -78,13 +78,9 @@ if ($_GET['id']) {
 				}
 
 				// admin can see who reserves what
-				if ($petID == $result2[$i]['petID']) {
-					$ownerID = $result2[$i]['userID'];
-				}
-
 				if (isset($_SESSION['adm'])) {
-					if ($statid == 2) {
-						$stattext = "Reserved by " . $n_f_name . " " . $n_l_name . " (ID: " . $ownerID . ")";
+					if ($petID == $result2[$i]['petID']) {
+						$stattext = "Reserved by " . $n_f_name . " " . $n_l_name . " (userID: " . $n_userID . ")";
 					}
 				}
 
